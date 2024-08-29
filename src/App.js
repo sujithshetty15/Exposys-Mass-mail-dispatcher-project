@@ -4,14 +4,14 @@ import './App.css';
 
 function App() {
   const [file, setFile] = useState(null);
-  const [fileName, setFileName] = useState(''); // New state for the file name
+  const [fileName, setFileName] = useState('');
   const [emails, setEmails] = useState({ valid: [], invalid: [] });
   const [uploadStatus, setUploadStatus] = useState('');
 
   const handleFileChange = (e) => {
     const chosenFile = e.target.files[0];
     setFile(chosenFile);
-    setFileName(chosenFile ? chosenFile.name : ''); // Update the file name state
+    setFileName(chosenFile ? chosenFile.name : ''); 
     setEmails({ valid: [], invalid: [] });
     setUploadStatus('');
   };
