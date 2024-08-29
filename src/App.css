@@ -1,38 +1,134 @@
-.App {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c3ec52, #0ba29d);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh; /* Changed height to min-height for the body */
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Adds spacing from the top */
+  margin-bottom: 20px; /* Adds spacing at the bottom to prevent overlapping */
+  position: relative; /* Ensure it respects the space of the body */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px; /* Ensure space below the title */
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.file-upload-wrapper {
+  margin-bottom: 20px; /* Adds margin to separate the upload buttons and title */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.file-upload {
+  display: inline-block; /* Centers the buttons under the title */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  background-color: #007bff;
   color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-file-upload:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.upload-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+}
+
+.file-name {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1em;
+  color: #666;
+}
+
+.upload-status {
+  text-align: center;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.email-list {
+  display: flex; /* Changed to flex for side-by-side layout */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.email-section {
+  flex: 1; /* Allows sections to grow and fill space equally */
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Allow scrolling inside each section */
+  max-height: 70vh; /* Max height to ensure the sections don't grow too tall */
+}
+
+.email-section h2 {
+  font-size: 1.2em;
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.email-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.email-li {
+  background-color: #ffffff;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9em;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.email-li:hover {
+  background-color: #e9ecef;
 }
