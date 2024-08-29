@@ -18,7 +18,7 @@ function App() {
 
   const handleUpload = async () => {
     if (!file) {
-      alert('Please select a file first.');
+      alert('Please select a file');
       return;
     }
 
@@ -30,7 +30,7 @@ function App() {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setEmails(response.data);
-      setUploadStatus('Upload successful!');
+      setUploadStatus('Uploaded successful!');
     } catch (error) {
       console.error('Error uploading file:', error);
       setUploadStatus('Error uploading file.');
