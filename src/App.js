@@ -30,7 +30,7 @@ function App() {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setEmails(response.data);
-      setUploadStatus('Uploaded successful!');
+      setUploadStatus('Uploaded successfully!');
     } catch (error) {
       console.error('Error uploading file:', error);
       setUploadStatus('Error uploading file.');
